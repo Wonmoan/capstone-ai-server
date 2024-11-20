@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Camera Feed</title>
+    <style>
+        /* 가로 정렬을 위한 flex 스타일 */
+        .container {
+            display: flex;
+            gap: 20px; /* 카메라 피드 간의 간격 조절 */
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multi Camera Feed</h1>
+    <div class="container">
+        <div>
+            <h2>C920 Webcam</h2>
+            <img src="{{ url_for('video_feed1') }}" width="640" height="480">
+        </div>
+        <div>
+            <h2>노트북 내장 웹캠</h2>
+            <img src="{{ url_for('video_feed2') }}" width="640" height="480">
+        </div>
+    </div>
+</body>
+</html>
